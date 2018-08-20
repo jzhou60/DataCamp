@@ -1,5 +1,5 @@
 '''
-Plotting a histogram of iris data
+1. Plotting a histogram of iris data
 For the exercises in this section, you will use a classic data set collected by botanist Edward Anderson and made famous by Ronald Fisher, one of the most prolific statisticians in history. Anderson carefully measured the anatomical properties of samples of three different species of iris, Iris setosa, Iris versicolor, and Iris virginica. The full data set is available as part of scikit-learn. Here, you will work with his measurements of petal length.
 
 Plot a histogram of the petal lengths of his 50 samples of Iris versicolor using matplotlib/seaborn's default settings. Recall that to specify the default seaborn style, you can use sns.set(), where sns is the alias that seaborn is imported as.
@@ -29,7 +29,7 @@ plt.hist(versicolor_petal_length)
 plt.show()
 
 '''
-Axis labels!
+2. Axis labels!
 In the last exercise, you made a nice histogram of petal lengths of Iris versicolor, but you didn't label the axes! That's ok; it's not your fault since we didn't ask you to. Now, add axis labels to the plot using plt.xlabel() and plt.ylabel(). Don't forget to add units and assign both statements to _. The packages matplotlib.pyplot and seaborn are already imported with their standard aliases. This will be the case in what follows, unless specified otherwise.
 
 INSTRUCTIONS
@@ -50,7 +50,7 @@ _=plt.ylabel('count')
 plt.show()
 
 '''
-Adjusting the number of bins in a histogram
+3. Adjusting the number of bins in a histogram
 The histogram you just made had ten bins. This is the default of matplotlib. The "square root rule" is a commonly-used rule of thumb for choosing number of bins: choose the number of bins to be the square root of the number of samples. Plot the histogram of Iris versicolor petal lengths again, this time using the square root rule for the number of bins. You specify the number of bins using the bins keyword argument of plt.hist().
 
 The plotting utilities are already imported and the seaborn defaults already set. The variable you defined in the last exercise, versicolor_petal_length, is already in your namespace.
@@ -88,7 +88,7 @@ _ = plt.ylabel('count')
 plt.show()
 
 '''
-Bee swarm plot
+4. Bee swarm plot
 Make a bee swarm plot of the iris petal lengths. Your x-axis should contain each of the three species, and the y-axis the petal lengths. A data frame containing the data is in your namespace as df.
 
 For your reference, the code Justin used to create the bee swarm plot in the video is provided below:
@@ -118,7 +118,7 @@ plt.ylabel('petal length (cm)')
 plt.show()
 
 '''
-Computing the ECDF
+5. Computing the ECDF
 In this exercise, you will write a function that takes as input a 1D array of data and then returns the x and y values of the ECDF. You will use this function over and over again throughout this course and its sequel. ECDFs are among the most important plots in statistical analysis. You can write your own function, foo(x,y) according to the following skeleton:
 
 def foo(a,b):
@@ -150,7 +150,7 @@ def ecdf(data):
     return x, y
 
 '''
-Plotting the ECDF
+6. Plotting the ECDF
 You will now use your ecdf() function to compute the ECDF for the petal lengths of Anderson's Iris versicolor flowers. You will then plot the ECDF. Recall that your ecdf() function returns two arrays so you will need to unpack them. An example of such unpacking is x, y = foo(data), for some function foo().
 
 INSTRUCTIONS
@@ -176,7 +176,7 @@ plt.ylabel('ECDF')
 plt.show()
 
 '''
-Comparison of ECDFs
+7. Comparison of ECDFs
 ECDFs also allow you to compare two or more distributions (though plots get cluttered if you have too many). Here, you will plot ECDFs for the petal lengths of all three iris species. You already wrote a function to generate ECDFs so you can put it to good use!
 
 To overlay all three ECDFs on the same plot, you can use plt.plot() three times, once for each ECDF. Remember to include marker='.' and linestyle='none' as arguments inside plt.plot().
