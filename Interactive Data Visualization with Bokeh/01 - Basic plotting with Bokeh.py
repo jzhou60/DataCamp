@@ -34,7 +34,9 @@ output_file('fert_lit.html')
 
 # Display the plot
 show(p)
-A scatter plot with different shapes
+
+'''
+2. A scatter plot with different shapes
 By calling multiple glyph functions on the same figure object, we can overlay multiple data sets in the same figure.
 
 In this exercise, you will plot female literacy vs fertility for two different regions, Africa and Latin America. Each set of x and y data has been loaded separately for you as fertility_africa, female_literacy_africa, fertility_latinamerica, and female_literacy_latinamerica.
